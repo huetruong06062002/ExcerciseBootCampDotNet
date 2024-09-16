@@ -1,0 +1,14 @@
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\bin\Debug\net8.0\ExcerciseDate2.exe
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\bin\Debug\net8.0\ExcerciseDate2.deps.json
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\bin\Debug\net8.0\ExcerciseDate2.runtimeconfig.json
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\bin\Debug\net8.0\ExcerciseDate2.dll
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\bin\Debug\net8.0\ExcerciseDate2.pdb
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.GeneratedMSBuildEditorConfig.editorconfig
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.AssemblyInfoInputs.cache
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.AssemblyInfo.cs
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.csproj.CoreCompileInputs.cache
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.dll
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\refint\ExcerciseDate2.dll
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.pdb
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.genruntimeconfig.cache
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ref\ExcerciseDate2.dll
