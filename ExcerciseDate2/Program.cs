@@ -199,5 +199,32 @@ Console.OutputEncoding = Encoding.UTF8;
 
 #region Bài 10: Tính lượng calo tiêu thụ
 
+//input: sophut, loai hinh
+const double caloChayBo = 10.0; //10 calo mỗi phút
+const double caloDapXe = 8.0; //8 calo mỗi phút
+const double caloBoiLoi = 12.0;// 12 calo mỗi phút
+
+Console.WriteLine("Nhập vào số phút đã tập thể dục:");
+double soPhut = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Chọn loại hình tập thể dục(1 - Chạy bộ, 2 - Đạp xe, 3 - Bơi lội):");
+double loaiHinh = Convert.ToDouble(Console.ReadLine());
+
+
+
+//output:
+double caloTieuThu = 0.0;
+
+//proccess:
+
+if(loaiHinh == 1){
+    caloTieuThu = soPhut * caloChayBo;
+}else if(loaiHinh == 2){
+    caloTieuThu = soPhut * caloDapXe;
+}else if(loaiHinh == 3){
+    caloTieuThu = soPhut * caloBoiLoi;
+}
+
+Console.WriteLine($"Lượng calo tiêu thụ: {caloTieuThu}");
+
 
 #endregion

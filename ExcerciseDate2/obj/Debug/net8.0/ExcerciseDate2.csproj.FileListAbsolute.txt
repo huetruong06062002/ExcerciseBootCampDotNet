@@ -12,3 +12,4 @@ E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\refint\E
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.pdb
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.genruntimeconfig.cache
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ref\ExcerciseDate2.dll
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExcerciseDate2\obj\Debug\net8.0\ExcerciseDate2.sourcelink.json
