@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</head>
+
+<body>
+  <style>
+
+    .container {
+      width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+  <div class="container">
+    <div class="owl-carousel">
+      <div class="item item-1">
+        <img src="/assets/img/products/women-1.jpg" alt="Women 1" />
+        <div class="desc">
+          <h1>Coat</h1>
+          <p>Pure PineApple</p>
+          <div class="price">
+            <p>$14.00</p>
+            <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+          </div>
+        </div>
+      </div>
+      <div class="item item-2">
+        <img src="/assets/img/products/women-2.jpg" alt="Women 2" />
+        <div class="desc">
+          <h1>Coat</h1>
+          <p>Pure PineApple</p>
+          <div class="price">
+            <p>$14.00</p>
+            <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+          </div>
+        </div>
+      </div>
+      <div class="item item-3">
+        <img src="/assets/img/products/women-3.jpg" alt="Women 3" />
+        <div class="desc">
+          <h1>Coat</h1>
+          <p>Pure PineApple</p>
+          <div class="price">
+            <p>$14.00</p>
+            <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+          </div>
+        </div>
+      </div>
+      <div class="item item-4">
+        <img src="/assets/img/products/women-4.jpg" alt="Women 4" />
+        <div class="desc">
+          <h1>Coat</h1>
+          <p>Pure PineApple</p>
+          <div class="price">
+            <p>$14.00</p>
+            <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,              // Hiển thị mũi tên điều hướng
+        responsive: {
+          0: { items: 1 },
+          600: { items: 2 },
+          1000: { items: 3 },
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
