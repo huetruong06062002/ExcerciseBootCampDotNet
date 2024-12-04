@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.min.css" integrity="sha512-4Y5AXHQsKRWv/566s/2jHXVBo2J4xNpapJJeaVGSbSEbHroH82lNN8y9dxbI9j5q0O9uzef5yRy5glBvfO941g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <style>
+    .section-review {
+      background-color: #EDEDED;
+      padding: 80px;
+
+      h2 {
+        text-align: center;
+        color: #1F487D;
+      }
+    }
+
+    .glider-contain {
+      max-width: 1300px;
+    }
+
+    .glider-prev,
+    .glider-next {
+      top: calc(50% - 20px);
+      transform: translateY(-50%);
+    }
+
+    .glider-prev {
+      left: -50px
+    }
+
+    .glider-next {
+      right: -50px
+    }
+
+    .glider-dot {
+      background: #1F487D;
+      opacity: .25;
+      height: 30px;
+      width: 30px;
+
+      &.active {
+        background: #1F487D;
+        opacity: 1;
+      }
+    }
+
+    .review {
+      border-bottom: 20px solid #1F487D;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      align-items: stretch;
+
+      >div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+
+      &__icon {
+        align-self: flex-start;
+        padding: 20px 0;
+      }
+
+      &__quote {
+        align-self: center;
+        flex-grow: 1;
+        justify-content: center;
+
+        p {
+          font-size: 20px;
+          line-height: 1.4
+        }
+      }
+
+      &__author {
+        align-self: baseline;
+
+        p {
+          margin: 5px;
+        }
+
+        &__name {
+          font-weight: bold;
+        }
+
+        &__org {
+          font-style: italic;
+          color: #3E597C;
+        }
+
+      }
+    }
+  </style>
+  <section class="section-review">
+
+    <h2>What our partners think</h2>
+    <div class="glider-contain">
+      <div class="glider">
+        <div class="review">
+          <div class="review__icon">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/975032/icon-quote.png" />
+          </div>
+          <div class="review__quote">
+            <p>"If you want real organization that works and effective communication - This company's got you covered.
+              It really saves me time and effort. This company is exactly what our HOA has been lacking. This company is
+              priceless for our HOA. It's all good.”</p>
+          </div>
+          <div class="review__author">
+            <p class="review__author__name">Jack Smith</p>
+            <p class="review__author__org">Treasurer, Generic HOA</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__icon">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/975032/icon-quote.png" />
+          </div>
+          <div class="review__quote">
+            <p>“They are the best thing that ever happened to our HOA.”</p>
+          </div>
+          <div class="review__author">
+            <p class="review__author__name">Jack Smith</p>
+            <p class="review__author__org">Treasurer, Generic HOA</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__icon">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/975032/icon-quote.png" />
+          </div>
+          <div class="review__quote">
+            <p>“It's really wonderful. This is simply unbelievable! I am really satisfied with this company. Needless to
+              say we are extremely satisfied with the results.”</p>
+          </div>
+          <div class="review__author">
+            <p class="review__author__name">Jack Smith</p>
+            <p class="review__author__org">Treasurer, Generic HOA</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__icon">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/975032/icon-quote.png" />
+          </div>
+          <div class="review__quote">
+            <p>"If you want real organization that works and effective communication - This company's got you covered.
+              It really saves me time and effort. This company is exactly what our HOA has been lacking. This company is
+              priceless for our HOA. It's all good.”</p>
+          </div>
+          <div class="review__author">
+            <p class="review__author__name">Jack Smith</p>
+            <p class="review__author__org">Treasurer, Generic HOA</p>
+          </div>
+        </div>
+      </div>
+
+      <button role="button" aria-label="Previous" class="glider-prev"><img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/975032/Previous.svg"></button>
+      <button role="button" aria-label="Next" class="glider-next"><img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/975032/Next.svg"></button>
+      <div role="tablist" class="dots"></div>
+    </div>
+    </div>
+   <!-- Glider.js JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.min.js" integrity="sha512-4Y5AXHQsKRWv/566s/2jHXVBo2J4xNpapJJeaVGSbSEbHroH82lNN8y9dxbI9j5q0O9uzef5yRy5glBvfO941g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

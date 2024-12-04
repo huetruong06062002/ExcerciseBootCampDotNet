@@ -7,8 +7,6 @@
   box-sizing: border-box;
 }
 
-
-
 header {
   border-top: 1px solid #ddd2d2;
   border-bottom: 1px solid #ddd2d2;
@@ -492,10 +490,16 @@ header {
     // background-image: url('/assets/img/banner-1.jpg');
     img {
     }
+    z-index: 1;
+    // width: 10rem;
+    // height: 10rem;
+    &:hover div p::before {
+      transform: scale(5);
+      opacity: 1;
+      border: 3px solid #ffffffd2;
+    }
+
     div {
-      z-index: 1;
-      // width: 10rem;
-      // height: 10rem;
       p {
         position: absolute;
         top: -2rem;
@@ -525,11 +529,6 @@ header {
             transform 0.5s ease,
             opacity 0.5s ease; //
         }
-        &:hover::before {
-          transform: scale(5);
-          opacity: 1;
-          border:3px solid #ffffffd2;
-        }
       }
     }
   }
@@ -540,18 +539,18 @@ header {
 .women-banner {
   display: flex;
   justify-content: space-between;
-  padding:2rem;
-  gap:2rem;
-  .women-large{
+  padding: 2rem;
+  gap: 2rem;
+  .women-large {
     flex-grow: 0.3;
-    background-image:url('/assets/img/products/women-large.jpg') ;
+    background-image: url('/assets/img/products/women-large.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 25%;
     height: 75vh;
     position: relative;
-    .desc{
+    .desc {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -559,27 +558,26 @@ header {
       z-index: 1;
       color: #fff;
       text-align: center;
-      h1{
+      h1 {
         @include text($fs-4xl, $fw-semi, $text-light);
       }
-      p{
+      p {
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #fff;
       }
     }
   }
-  .women-product{
+  .women-product {
     flex-grow: 0.7;
-   
-    nav{
-      
-      ul.menu{
+
+    nav {
+      ul.menu {
         display: flex;
         list-style: none;
-        justify-content:center;
+        justify-content: center;
 
-        li:nth-child(1){
-          a{
+        li:nth-child(1) {
+          a {
             opacity: 1;
             padding-bottom: 0.1rem;
             border-bottom: 2px solid #000;
@@ -587,49 +585,48 @@ header {
         }
 
         li {
-          padding:0rem 1rem;        
-          a{
+          padding: 0rem 1rem;
+          a {
             text-decoration: none;
-            @include text($fs-xl,);       
+            @include text($fs-xl);
             opacity: 0.5;
             line-height: 2;
           }
         }
       }
     }
-    .women-product-container{
+    .women-product-container {
       margin: 5rem 2rem 0rem 3rem;
-      .flickity-container{   
-      
-        .main-carousel{
+      .flickity-container {
+        .main-carousel {
           text-align: center;
-          img{
+          img {
             // width: 100%;
           }
-          .desc{
+          .desc {
             display: flex;
             flex-direction: column;
             text-align: center;
           }
-          h1{
+          h1 {
             @include text(0.8rem, $fw-semi, #cecece);
             text-transform: uppercase;
             text-align: center;
             margin-top: 0.2rem;
           }
-          p{
+          p {
             margin-top: 0.5rem;
             text-align: center;
           }
-          .price{
+          .price {
             display: flex;
             justify-content: center;
-            gap:5px;
-            p{
+            gap: 5px;
+            p {
               @include text($fs-2xl, $fw-bold, $text-warning);
             }
-            del{
-              @include text(14px,$fs-xl, #cecece);
+            del {
+              @include text(14px, $fs-xl, #cecece);
               justify-content: center;
               display: inline-block;
               margin-top: 1rem;
@@ -641,76 +638,486 @@ header {
   }
 }
 
-.deal-of-week{
-  background-image: url("/assets/img/time-bg.jpg");
+.deal-of-week {
+  background-image: url('/assets/img/time-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 75vh;
+  height: 50rem;
   margin: 0 2rem;
-  div{
-    h1{
+  position: relative;
+  .content {
+    width: 50rem;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    h1 {
+      text-align: center;
+      @include text($fs-3xl, $fw-semi, $bg-dark);
+      &::after {
+        content: '';
+        display: block;
+        width: 10%;
+        height: 2px;
+        @extend .bg-orange;
+        margin: 1rem auto;
+      }
+    }
+    > p {
+      text-align: center;
+      @include text(1em, $fw-light);
+      line-height: 1.2rem;
+      opacity: 0.5;
+      width: 35rem;
+      margin-left: 7.5rem;
+    }
+    .price {
+      display: flex;
+      margin-left: 21.5rem;
+      margin-top: 0.5rem;
+      > p {
+        @include text(1.8rem, 700);
+        color: #ffa500;
+      }
+      span {
+        @include text(14px, 500);
+        margin-top: 0.5rem;
+        margin-left: 0.2rem;
+        opacity: 0.5;
+      }
+    }
+    .countdown-container {
+      display: flex;
+      margin-left: 12rem;
+      margin-top: 2rem;
+      .item {
+        @extend .bg-white;
+        margin: 0 0.5rem;
+        text-align: center;
+        width: 5rem;
+        height: 6rem;
+        p:nth-child(1) {
+          @include text(2rem, 700);
+          color: #ffa500;
+        }
+        p:nth-child(2) {
+          @include text(1rem, 700);
+          color: #000;
+          opacity: 0.2;
+          margin-top: -1.5rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+    button {
+      margin-top: 3rem;
+      margin-left: 20rem;
+      outline: none;
+      border: none;
+      @extend .bg-orange;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      @extend .text-light;
+    }
+  }
+}
 
+.man-banner {
+  margin: 5rem 2rem 0rem;
+  display: flex;
+  gap: 1rem;
+  .content-left {
+    width: 60%;
+    gap: 2rem;
+    nav {
+      margin-left: 25rem;
+      margin-bottom: 3rem;
+      .menu {
+        display: flex;
+        list-style: none;
+
+        li:nth-child(1) {
+          a {
+            opacity: 1;
+            padding-bottom: 0.1rem;
+            border-bottom: 2px solid #000;
+          }
+        }
+
+        li {
+          padding: 0rem 1rem;
+          a {
+            text-decoration: none;
+            @include text($fs-2xl, $fw-light, $text-dark);
+            opacity: 0.5;
+          }
+        }
+      }
     }
-    p{
-  
+    .men-product-container {
+      .flickity-container {
+        .main-carousel-2 {
+          .carousel-cell {
+            img {
+            }
+            .desc {
+              text-align: center;
+              h1 {
+                @include text(14px, $fw-semi, $text-dark);
+                text-transform: uppercase;
+                opacity: 0.5;
+                margin-top: 0.5rem;
+              }
+              p {
+                margin-top: 0.5rem;
+              }
+              .price {
+                display: flex;
+                margin-left: 5rem;
+                p {
+                  @include text($fs-xl, $fw-bold, $text-warning);
+                }
+                del {
+                  @include text(14px, $fw-light, $text-dark);
+                  margin-top: 0.8rem;
+                  opacity: 0.5;
+                  margin-left: 0.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    .price{
-      p{
-  
-      }
-      span{
-  
-      }
+  }
+
+  .content-right {
+    width: 40%;
+    position: relative;
+    margin-left: 8rem;
+    img {
+      width: 100%;
+      height: 75vh;
+      object-fit: cover;
     }
-    .countdown-container{
-      .days{
-  
+    .desc {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      h1 {
+        @include text($fs-4xl, $fw-semi, $text-light);
       }
-      .hours{
-  
-      }
-      .minutes{
-  
-      }
-      .seconds{
-  
+      p {
+        @extend .color-white;
+        margin-top: 1rem;
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          @extend .bg-white;
+          margin: 1rem auto;
+        }
       }
     }
   }
 }
 
+.instagram-photo {
+  display: flex;
+  margin-top: 2rem;
+  .item {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+    &:hover::after,
+    &:hover div {
+      opacity: 1;
+    }
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      width: inherit;
+      height: 100%;
+      opacity: 0;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      i {
+        display: inline-block;
+      }
+      p {
+        margin-left: -3rem;
+        text-align: center;
+      }
+    }
+  }
+}
 
+.latest-blog {
+  margin: 2rem 2rem;
+  padding: 0 10rem;
+  > h1 {
+    text-align: center;
+    @include text($fs-3xl, $fw-semi, $bg-dark);
+    &::after {
+      content: '';
+      display: block;
+      width: 5%;
+      height: 2px;
+      @extend .bg-orange;
+      margin: 1rem auto;
+    }
+  }
+  .content {
+    display: flex;
+    gap: 3rem;
+    .item {
+      // margin: 0 1rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .sub-desc {
+        margin-top: 1rem;
+        display: flex;
+        .item {
+          i {
+            display: inline-block;
+            @include text($fs-xl, $fw-light, $text-warning);
+          }
+          p {
+            display: inline-block;
+            opacity: 0.5;
+          }
+        }
+        .num-mess {
+          margin-left: 2rem;
+          i {
+            display: inline-block;
+            @include text($fs-xl, $fw-light, $text-warning);
+          }
+          p {
+            display: inline-block;
+            opacity: 0.5;
+          }
+        }
+      }
+      .desc {
+        width: 70%;
+        h1 {
+          margin-top: 1rem;
+          line-height: 1.5rem;
+        }
+        p {
+          opacity: 0.5;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
 
+.partner-logo {
+  display: flex;
+  margin: 2rem 2rem;
+  padding: 0 10rem;
+  .item {
+    width: calc(100% / 3);
+    border: 1px solid #ddd2d2;
+    display: flex;
+    padding: 2rem 0px;
+    padding-left: 5rem;
+    img {
+      object-fit: contain;
+    }
+    .desc {
+      padding-left: 2%;
+      h1 {
+        @include text($fs-2xl, $fw-semi, $text-dark);
+        text-transform: uppercase;
+      }
+      p {
+      }
+    }
+  }
+}
 
+.footer {
+  background-color: #303030;
+  .logo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 5rem;
+    .item {
+    }
+  }
+  .content {
+    background-color: #191919;
+    display: flex;
+    padding: 3rem 12rem;
+    gap: 8rem;
+    .item {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      p {
+        @include text($fs-xl, $fw-light, $text-light);
+        margin-top: 1rem;
+        opacity: 0.5;
+      }
+      .logo-icon {
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -1rem;
+        position: relative;
+        .item {
+          background-color: #434445;
+          margin: 0 1rem;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          i {
+            position: absolute;
+            top: 30%;
+            padding-left: 1rem;
+            display: inline-block;
+            @include text($fs-xl, $fw-light, $text-light);
+          }
+        }
+      }
+    }
+    .item2, .item3, .item4{
+      h1 {
+        color: #fff;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+        li {
+          a{
+            opacity: 0.5;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .item{
+      h1{
 
+      }
+      p{
 
+      }
+      input{
+        width: 70%;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        border: none;
+        background-color: #303030;
+        color: #fff;
+        opacity: 0.5;
+        display: inline-block;
 
+        &::placeholder{
+          color: #fff;
+          opacity: 0.5;
+          text-transform: capitalize;
+          padding: 0 1rem;
+        }
+      }
+      button{
+        display: inline-block;
+        margin: 0;
+        outline: none;
+        border: none;
+        padding: 0.5rem 1rem;
+        @extend .bg-orange;
+      }
+    }
+  }
+  .coppy-right {
+    border-top: 1px solid #cecece;
+    background-color: #191919;
+    padding: 1rem 12rem;
+    display: flex;
+    justify-content: space-between;
+    pre {
+      opacity: 0.5;
+      @include text($fs-xl, $fw-light, $text-light);
+      i {
+        color: red;
+        margin: 0 0.3rem;
+      }
+    }
+    img {
+    }
+  }
+}
 
-
-
-
-
-
-
+//---------------------------------
 
 body > section.women-banner.container > div.women-product > div > div > div.swiper-button-prev,
-body > section.women-banner.container > div.women-product > div > div > div.swiper-button-next
-{
+body > section.women-banner.container > div.women-product > div > div > div.swiper-button-next {
   display: none;
 }
 
-body > section.women-banner.container > div.women-product > div > div > div.main-carousel.flickity-enabled.is-draggable > div{
-  height: 31.25rem!important;
+body
+  > section.women-banner.container
+  > div.women-product
+  > div
+  > div
+  > div.main-carousel.flickity-enabled.is-draggable
+  > div {
+  height: 31.25rem !important;
 }
 
 // .carousel-cell{
 //   margin: 0px 0.625rem;
-// }   
+// }
 
-
-body > section.women-banner.container > div.women-product > div > div > div.main-carousel.flickity-enabled.is-draggable > div > div{
-
+body
+  > section.women-banner.container
+  > div.women-product
+  > div
+  > div
+  > div.main-carousel.flickity-enabled.is-draggable
+  > div
+  > div {
 }
 
-
+body
+  > section.man-banner.container
+  > div.content-left
+  > div
+  > div
+  > div.main-carousel-2.flickity-enabled.is-draggable
+  > div {
+  margin-left: 3rem;
+}

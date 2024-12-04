@@ -46,7 +46,10 @@
   <!-- Thêm Flickity CSS -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.2.2/dist/flickity.min.css">
 
-
+  <!-- Glider.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.min.css"
+    integrity="sha512-4Y5AXHQsKRWv/566s/2jHXVBo2J4xNpapJJeaVGSbSEbHroH82lNN8y9dxbI9j5q0O9uzef5yRy5glBvfO941g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
   <link rel="stylesheet" href="/assets/css/home.css">
@@ -339,16 +342,28 @@
     <div class="content">
       <h1>Deal Of The Week</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae asperiores dolores quia facere cumque totam
-        dignissimos ad, optio nihil porro pariatur dolorem qui impedit rem eligendi dolorum est eaque repellendus.</p>
+      </p>
       <div class="price">
-        <p>35.00 /</p>
+        <p>$35.00 /</p>
         <span>HanBag</span>
       </div>
       <div class="countdown-container">
-        <p class="days">30 days</p>
-        <p class="hours">11 hours</p>
-        <p class="minutes">58 min</p>
-        <p class="seconds">60s</p>
+        <pre class="item days">
+          <p id="days">30</p>
+          <p>days</p>
+        </pre>
+        <pre class="item hours">
+          <p id="hours">11</p>
+          <p>hours</p>
+        </pre>
+        <pre class="item minutes">
+          <p id="minutes">58</p>
+          <p>mins</p>
+        </pre>
+        <pre class="item seconds">
+          <p id="seconds">60</p>
+          <p>secs</p>
+        </pre>
       </div>
       <button>
         Shop now
@@ -356,22 +371,282 @@
     </div>
   </section>
 
-  <section class="man-banner">
+  <section class="man-banner container">
+    <div class="content-left">
+      <nav>
+        <ul class="menu">
+          <li><a href="">Clothings</a></li>
+          <li><a href="">HandBag</a></li>
+          <li><a href="">Shoes</a></li>
+          <li><a href="">Accessories</a></li>
+        </ul>
+      </nav>
+      <!-- Thêm container của Swiper -->
+      <div class="men-product-container">
+        <!-- Các slide sản phẩm -->
+        <div class="flickity-container">
+          <div class="main-carousel-2">
+            <div class="carousel-cell">
+              <img src="/assets/img/products/man-1.jpg" alt="Women 2" />
+              <div class="desc">
+                <h1>Coat</h1>
+                <p>Pure PineApple</p>
+                <div class="price">
+                  <p>$14.00</p>
+                  <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/img/products/man-2.jpg" alt="Women 2" />
+              <div class="desc">
+                <h1>Coat</h1>
+                <p>Pure PineApple</p>
+                <div class="price">
+                  <p>$14.00</p>
+                  <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/img/products/man-3.jpg" alt="Women 2" />
+              <div class="desc">
+                <h1>Coat</h1>
+                <p>Pure PineApple</p>
+                <div class="price">
+                  <p>$14.00</p>
+                  <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="/assets/img/products/man-3.jpg" alt="Women 2" />
+              <div class="desc">
+                <h1>Coat</h1>
+                <p>Pure PineApple</p>
+                <div class="price">
+                  <p>$14.00</p>
+                  <del>$35.00</del> <!-- Sửa thẻ đóng từ </d> thành </del> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <div class="content-right">
+      <img src="/assets/img/products/man-large.jpg" alt="">
+      <div class="desc">
+        <h1>Men's</h1>
+        <p>Discover More</p>
+      </div>
+    </div>
+
 
   </section>
-  <section class="instagram-photo">
 
+  <section class="instagram-photo">
+    <div class="item item-1">
+      <img src="/assets/img/insta-1.jpg" alt="">
+      <div>
+        <i class="fa-solid fa-image"></i>
+        <p>colorlib_Collection</p>
+      </div>
+    </div>
+    <div class="item item-2">
+      <img src="/assets/img/insta-2.jpg" alt="">
+       <div>
+        <i class="fa-solid fa-image"></i>
+        <p>colorlib_Collection</p>
+      </div>
+    </div>
+    <div class="item item-3">
+      <img src="/assets/img/insta-3.jpg" alt="">
+       <div>
+        <i class="fa-solid fa-image"></i>
+        <p>colorlib_Collection</p>
+      </div>
+    </div>
+    <div class="item item-4">
+      <img src="/assets/img/insta-4.jpg" alt="">
+       <div>
+        <i class="fa-solid fa-image"></i>
+        <p>colorlib_Collection</p>
+      </div>
+    </div>
+    <div class="item item-5">
+      <img src="/assets/img/insta-5.jpg" alt="">
+       <div>
+        <i class="fa-solid fa-image"></i>
+        <p>colorlib_Collection</p>
+      </div>
+    </div>
+    <div class="item item-6">
+      <img src="/assets/img/insta-6.jpg" alt="">
+       <div>
+        <i class="fa-solid fa-image"></i>
+        <p>colorlib_Collection</p>
+      </div>
+    </div>
   </section>
 
   <section class="latest-blog">
-
+    <h1>From The Blog</h1>
+    <div class="content">
+      <div class="item item-1">
+        <img src="/assets/img/latest-1.jpg" alt="">
+        <div class="sub-desc">
+          <div class="item">
+            <i class="fa-solid fa-calendar"></i>
+            <p>January 02, 2021</p>
+          </div>
+          <div class="num-mess">
+            <i class="fa-solid fa-comment"></i>
+            <p>3</p>
+          </div>
+        </div>
+        <div class="desc">
+          <h1>The Best Street Style From London Fashion Week</h1>
+          <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+        </div>
+      </div>
+      <div class="item item-2">
+        <img src="/assets/img/latest-2.jpg" alt="">
+        <div class="sub-desc">
+          <div class="item">
+            <i class="fa-solid fa-calendar"></i>
+            <p>January 02, 2021</p>
+          </div>
+          <div class="num-mess">
+            <i class="fa-solid fa-comment"></i>
+            <p>3</p>
+          </div>
+        </div>
+        <div class="desc">
+          <h1>Vogue's Ultimate Guide To Autumn/Winter 2019 Shoes</h1>
+          <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+        </div>
+      </div>
+      <div class="item item-3">
+        <img src="/assets/img/latest-3.jpg" alt="">
+        <div class="sub-desc">
+          <div class="item">
+            <i class="fa-solid fa-calendar"></i>
+            <p>January 02, 2021</p>
+          </div>
+          <div class="num-mess">
+            <i class="fa-solid fa-comment"></i>
+            <p>3</p>
+          </div>
+        </div>
+        <div class="desc">
+          <h1>How To Brighten Your Wardrobe With A Dash Of Lime</h1>
+          <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+        </div>
+      </div>
+    </div>
   </section>
+
   <section class="partner-logo">
-
+    <div class="item item-1">
+      <img src="/assets/img/icon-1.png" alt="">
+      <div class="desc">
+        <h1>Free Shipping</h1>
+        <p>For all order over 99$</p>
+      </div>
+    </div>
+    <div class="item item-2">
+      <img src="/assets/img/icon-2.png" alt="">
+      <div class="desc">
+        <h1>Delivery On Time</h1>
+        <p>If good have prolems</p>
+      </div>
+    </div>
+    <div class="item item-1">
+      <img src="/assets/img/icon-3.png" alt="">
+      <div class="desc">
+        <h1>Secure Payment</h1>
+        <p>100% secure payment</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-
+  <footer class="footer">
+    <div class="logo">
+      <div class="item item-1">
+        <img src="/assets/img/logo-carousel/logo-1.png" alt="">
+      </div>
+      <div class="item item-2">
+        <img src="/assets/img/logo-carousel/logo-2.png" alt="">
+      </div>
+      <div class="item item-3">
+        <img src="/assets/img/logo-carousel/logo-3.png" alt="">
+      </div>
+      <div class="item item-4">
+        <img src="/assets/img/logo-carousel/logo-4.png" alt="">
+      </div>
+      <div class="item item-5">
+        <img src="/assets/img/logo-carousel/logo-5.png" alt="">
+      </div>
+    </div>
+    <div class="content">
+      <div class="item item1">
+        <img src="/assets/img/logo.png" alt="">
+        <p>Address: 60-49 Road 11378 New York</p>
+        <p>Phone: +65 11.188.888</p>
+        <p>Email: hello.colorlib@gmail.com</p>
+        <div class="logo-icon">
+          <div class="item item-1">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="item item-2">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+          <div class="item item-3">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="item item-4">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </div>
+        </div>
+      </div>
+      <div class="item item2">
+        <h1>Information</h1>
+        <ul>
+          <li><a href="">About us</a></li>
+          <li><a href="">Checkout</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Services</a></li>
+        </ul>  
+      </div>
+      <div class="item item3">
+        <h1>My Account</h1>
+        <ul>
+          <li><a href="">My Account</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Shopping Cart</a></li>
+          <li><a href="">Shop</a></li>
+        </ul>  
+      </div>
+      <div class="item item4">
+        <h1>Join Our Newsleeter Now</h1>
+        <p>Get E-mail updates about our latest shop and special offers</p>
+        <input type="text" placeholder="Enter your mail">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="coppy-right">
+      <pre>Copyright ©2024 All rights reserved | This template is made with <i class="fa-regular fa-heart"></i>by Colorlib</pre>
+      <img src="/assets/img/payment-method.png" alt="">
+    </div>
   </footer>
 
   <!--js thư viện-->
@@ -385,6 +660,10 @@
 
   <!-- Thêm Flickity JS -->
   <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>
+
+
+
+
 
   <!-- // Flickity -->
   <script>
@@ -401,8 +680,62 @@
   </script>
 
   <script>
+    var elem = document.querySelector('.main-carousel-2');
+    var flkty = new Flickity(elem, {
+      cellAlign: 'center',
+      contain: true,
+      autoplay: true,
+      wrapAround: true,  // Lặp lại carousel
+      pageDots: true,
+    });
+
+    new WOW().init(); // Khởi tạo WOW.js
+  </script>
 
 
+
+
+
+
+
+  <!-- time -1 /seconds -->
+  <script>
+    function countdown() {
+      let days = parseInt(document.getElementById("days").innerText);
+      let hours = parseInt(document.getElementById("hours").innerText);
+      let minutes = parseInt(document.getElementById("minutes").innerText);
+      let seconds = parseInt(document.getElementById("seconds").innerText);
+
+      if (seconds > 0) {
+        seconds--;
+      } else {
+        seconds = 59;
+        if (minutes > 0) {
+          minutes--;
+        } else {
+          minutes = 59;
+          if (hours > 0) {
+            hours--;
+          } else {
+            hours = 23;
+            if (days > 0) {
+              days--;
+            }
+          }
+        }
+      }
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }
+
+    setInterval(countdown, 1000);
+  </script>
+
+
+  <script>
 
     $(document).ready(function () {
       $('.fa-sharp-duotone').click(function () {
@@ -433,8 +766,10 @@
       }
     )
 
-
   </script>
+
+
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 

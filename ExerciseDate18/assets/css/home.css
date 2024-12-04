@@ -67,7 +67,7 @@
   color: #1861cf;
 }
 
-.bg-white {
+.bg-white, .man-banner .content-right .desc p::after, .deal-of-week .content .countdown-container .item {
   background-color: #fff;
 }
 
@@ -79,7 +79,7 @@
   border-color: #fff;
 }
 
-.color-white {
+.color-white, .man-banner .content-right .desc p {
   color: #fff;
 }
 
@@ -87,7 +87,7 @@
   background-color: #e2ebfc;
 }
 
-.text-light, .hero-section .carousel .item .desc button, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
+.text-light, .deal-of-week .content button, .hero-section .carousel .item .desc button, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
   color: #e2ebfc;
 }
 
@@ -147,7 +147,7 @@
   color: #ddd2d2;
 }
 
-.bg-orange, .hero-section .carousel .item .desc button {
+.bg-orange, .footer .content .item button, .latest-blog > h1::after, .deal-of-week .content button, .deal-of-week .content h1::after, .hero-section .carousel .item .desc button {
   background-color: #FFA500;
 }
 
@@ -265,7 +265,7 @@
   color: #1861cf;
 }
 
-.bg-white {
+.bg-white, .man-banner .content-right .desc p::after, .deal-of-week .content .countdown-container .item {
   background-color: #fff;
 }
 
@@ -277,7 +277,7 @@
   border-color: #fff;
 }
 
-.color-white {
+.color-white, .man-banner .content-right .desc p {
   color: #fff;
 }
 
@@ -285,7 +285,7 @@
   background-color: #e2ebfc;
 }
 
-.text-light, .hero-section .carousel .item .desc button, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
+.text-light, .deal-of-week .content button, .hero-section .carousel .item .desc button, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
   color: #e2ebfc;
 }
 
@@ -345,7 +345,7 @@
   color: #ddd2d2;
 }
 
-.bg-orange, .hero-section .carousel .item .desc button {
+.bg-orange, .footer .content .item button, .latest-blog > h1::after, .deal-of-week .content button, .deal-of-week .content h1::after, .hero-section .carousel .item .desc button {
   background-color: #FFA500;
 }
 
@@ -827,9 +827,12 @@ header .login p {
 }
 .banner-section .banner {
   position: relative;
-}
-.banner-section .banner div {
   z-index: 1;
+}
+.banner-section .banner:hover div p::before {
+  transform: scale(5);
+  opacity: 1;
+  border: 3px solid rgba(255, 255, 255, 0.8235294118);
 }
 .banner-section .banner div p {
   position: absolute;
@@ -855,11 +858,6 @@ header .login p {
   z-index: 1;
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
-}
-.banner-section .banner div p:hover::before {
-  transform: scale(5);
-  opacity: 1;
-  border: 3px solid rgba(255, 255, 255, 0.8235294118);
 }
 .women-banner {
   display: flex;
@@ -966,8 +964,438 @@ header .login p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 75vh;
+  height: 50rem;
   margin: 0 2rem;
+  position: relative;
+}
+.deal-of-week .content {
+  width: 50rem;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+}
+.deal-of-week .content h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+}
+.deal-of-week .content h1::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  margin: 1rem auto;
+}
+.deal-of-week .content > p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  color: #000;
+  line-height: 1.2rem;
+  opacity: 0.5;
+  width: 35rem;
+  margin-left: 7.5rem;
+}
+.deal-of-week .content .price {
+  display: flex;
+  margin-left: 21.5rem;
+  margin-top: 0.5rem;
+}
+.deal-of-week .content .price > p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  color: #ffa500;
+}
+.deal-of-week .content .price span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+  opacity: 0.5;
+}
+.deal-of-week .content .countdown-container {
+  display: flex;
+  margin-left: 12rem;
+  margin-top: 2rem;
+}
+.deal-of-week .content .countdown-container .item {
+  margin: 0 0.5rem;
+  text-align: center;
+  width: 5rem;
+  height: 6rem;
+}
+.deal-of-week .content .countdown-container .item p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  color: #ffa500;
+}
+.deal-of-week .content .countdown-container .item p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  color: #000;
+  opacity: 0.2;
+  margin-top: -1.5rem;
+  text-transform: uppercase;
+}
+.deal-of-week .content button {
+  margin-top: 3rem;
+  margin-left: 20rem;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+
+.man-banner {
+  margin: 5rem 2rem 0rem;
+  display: flex;
+  gap: 1rem;
+}
+.man-banner .content-left {
+  width: 60%;
+  gap: 2rem;
+}
+.man-banner .content-left nav {
+  margin-left: 25rem;
+  margin-bottom: 3rem;
+}
+.man-banner .content-left nav .menu {
+  display: flex;
+  list-style: none;
+}
+.man-banner .content-left nav .menu li:nth-child(1) a {
+  opacity: 1;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid #000;
+}
+.man-banner .content-left nav .menu li {
+  padding: 0rem 1rem;
+}
+.man-banner .content-left nav .menu li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color: #000;
+  opacity: 0.5;
+}
+.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc {
+  text-align: center;
+}
+.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc h1 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc p {
+  margin-top: 0.5rem;
+}
+.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc .price {
+  display: flex;
+  margin-left: 5rem;
+}
+.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc .price p {
+  font-size: 18px;
+  font-weight: 800;
+  color: #f9d716;
+}
+.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc .price del {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  margin-top: 0.8rem;
+  opacity: 0.5;
+  margin-left: 0.2rem;
+}
+.man-banner .content-right {
+  width: 40%;
+  position: relative;
+  margin-left: 8rem;
+}
+.man-banner .content-right img {
+  width: 100%;
+  height: 75vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.man-banner .content-right .desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.man-banner .content-right .desc h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+.man-banner .content-right .desc p {
+  margin-top: 1rem;
+}
+.man-banner .content-right .desc p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 1rem auto;
+}
+
+.instagram-photo {
+  display: flex;
+  margin-top: 2rem;
+}
+.instagram-photo .item {
+  position: relative;
+}
+.instagram-photo .item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.instagram-photo .item:hover::after, .instagram-photo .item:hover div {
+  opacity: 1;
+}
+.instagram-photo .item div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  width: inherit;
+  height: 100%;
+  opacity: 0;
+}
+.instagram-photo .item div img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.instagram-photo .item div i {
+  display: inline-block;
+}
+.instagram-photo .item div p {
+  margin-left: -3rem;
+  text-align: center;
+}
+
+.latest-blog {
+  margin: 2rem 2rem;
+  padding: 0 10rem;
+}
+.latest-blog > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+}
+.latest-blog > h1::after {
+  content: "";
+  display: block;
+  width: 5%;
+  height: 2px;
+  margin: 1rem auto;
+}
+.latest-blog .content {
+  display: flex;
+  gap: 3rem;
+}
+.latest-blog .content .item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.latest-blog .content .item .sub-desc {
+  margin-top: 1rem;
+  display: flex;
+}
+.latest-blog .content .item .sub-desc .item i {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  color: #f9d716;
+}
+.latest-blog .content .item .sub-desc .item p {
+  display: inline-block;
+  opacity: 0.5;
+}
+.latest-blog .content .item .sub-desc .num-mess {
+  margin-left: 2rem;
+}
+.latest-blog .content .item .sub-desc .num-mess i {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  color: #f9d716;
+}
+.latest-blog .content .item .sub-desc .num-mess p {
+  display: inline-block;
+  opacity: 0.5;
+}
+.latest-blog .content .item .desc {
+  width: 70%;
+}
+.latest-blog .content .item .desc h1 {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+.latest-blog .content .item .desc p {
+  opacity: 0.5;
+  margin-top: 1rem;
+}
+
+.partner-logo {
+  display: flex;
+  margin: 2rem 2rem;
+  padding: 0 10rem;
+}
+.partner-logo .item {
+  width: 33.3333333333%;
+  border: 1px solid #ddd2d2;
+  display: flex;
+  padding: 2rem 0px;
+  padding-left: 5rem;
+}
+.partner-logo .item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.partner-logo .item .desc {
+  padding-left: 2%;
+}
+.partner-logo .item .desc h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+.footer {
+  background-color: #303030;
+}
+.footer .logo {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 5rem;
+}
+.footer .content {
+  background-color: #191919;
+  display: flex;
+  padding: 3rem 12rem;
+  gap: 8rem;
+}
+.footer .content .item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer .content .item:hover {
+  cursor: pointer;
+}
+.footer .content .item p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+.footer .content .item .logo-icon {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  position: relative;
+}
+.footer .content .item .logo-icon .item {
+  background-color: #434445;
+  margin: 0 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.footer .content .item .logo-icon .item i {
+  position: absolute;
+  top: 30%;
+  padding-left: 1rem;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+.footer .content .item2 h1, .footer .content .item3 h1, .footer .content .item4 h1 {
+  color: #fff;
+}
+.footer .content .item2 ul, .footer .content .item3 ul, .footer .content .item4 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.footer .content .item2 ul li a, .footer .content .item3 ul li a, .footer .content .item4 ul li a {
+  opacity: 0.5;
+  color: #fff;
+  text-decoration: none;
+}
+.footer .content .item input {
+  width: 70%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: none;
+  background-color: #303030;
+  color: #fff;
+  opacity: 0.5;
+  display: inline-block;
+}
+.footer .content .item input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.5;
+  text-transform: capitalize;
+  padding: 0 1rem;
+}
+.footer .content .item input::placeholder {
+  color: #fff;
+  opacity: 0.5;
+  text-transform: capitalize;
+  padding: 0 1rem;
+}
+.footer .content .item button {
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+.footer .coppy-right {
+  border-top: 1px solid #cecece;
+  background-color: #191919;
+  padding: 1rem 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .coppy-right pre {
+  opacity: 0.5;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+.footer .coppy-right pre i {
+  color: red;
+  margin: 0 0.3rem;
 }
 body > section.women-banner.container > div.women-product > div > div > div.swiper-button-prev,
 body > section.women-banner.container > div.women-product > div > div > div.swiper-button-next {
@@ -976,4 +1404,8 @@ body > section.women-banner.container > div.women-product > div > div > div.swip
 
 body > section.women-banner.container > div.women-product > div > div > div.main-carousel.flickity-enabled.is-draggable > div {
   height: 31.25rem !important;
+}
+
+body > section.man-banner.container > div.content-left > div > div > div.main-carousel-2.flickity-enabled.is-draggable > div {
+  margin-left: 3rem;
 }/*# sourceMappingURL=home.css.map */
