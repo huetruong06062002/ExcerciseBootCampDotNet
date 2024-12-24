@@ -67,7 +67,7 @@
   color: #1861cf;
 }
 
-.bg-white, .man-banner .content-right .desc p::after, .deal-of-week .content .countdown-container .item {
+.bg-white {
   background-color: #fff;
 }
 
@@ -79,7 +79,7 @@
   border-color: #fff;
 }
 
-.color-white, .man-banner .content-right .desc p {
+.color-white {
   color: #fff;
 }
 
@@ -87,7 +87,7 @@
   background-color: #e2ebfc;
 }
 
-.text-light, .deal-of-week .content button, .hero-section .carousel .item .desc button, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
+.text-light, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
   color: #e2ebfc;
 }
 
@@ -103,7 +103,7 @@
   background-color: #000;
 }
 
-.text-dark, .hero-section .carousel .item .desc p.p-2, .hero-section .carousel .item .desc .black-friday {
+.text-dark {
   color: #000;
 }
 
@@ -147,11 +147,11 @@
   color: #ddd2d2;
 }
 
-.bg-orange, .footer .content .item button, .latest-blog > h1::after, .deal-of-week .content button, .deal-of-week .content h1::after, .hero-section .carousel .item .desc button {
+.bg-orange, .footer .content .item button {
   background-color: #FFA500;
 }
 
-.text-orange, .hero-section .carousel .item .desc p.p-1 {
+.text-orange {
   color: #FFA500;
 }
 
@@ -265,7 +265,7 @@
   color: #1861cf;
 }
 
-.bg-white, .man-banner .content-right .desc p::after, .deal-of-week .content .countdown-container .item {
+.bg-white {
   background-color: #fff;
 }
 
@@ -277,7 +277,7 @@
   border-color: #fff;
 }
 
-.color-white, .man-banner .content-right .desc p {
+.color-white {
   color: #fff;
 }
 
@@ -285,7 +285,7 @@
   background-color: #e2ebfc;
 }
 
-.text-light, .deal-of-week .content button, .hero-section .carousel .item .desc button, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
+.text-light, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
   color: #e2ebfc;
 }
 
@@ -301,7 +301,7 @@
   background-color: #000;
 }
 
-.text-dark, .hero-section .carousel .item .desc p.p-2, .hero-section .carousel .item .desc .black-friday {
+.text-dark {
   color: #000;
 }
 
@@ -345,11 +345,11 @@
   color: #ddd2d2;
 }
 
-.bg-orange, .footer .content .item button, .latest-blog > h1::after, .deal-of-week .content button, .deal-of-week .content h1::after, .hero-section .carousel .item .desc button {
+.bg-orange, .footer .content .item button {
   background-color: #FFA500;
 }
 
-.text-orange, .hero-section .carousel .item .desc p.p-1 {
+.text-orange {
   color: #FFA500;
 }
 
@@ -362,8 +362,8 @@
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -775,531 +775,41 @@ header .login p {
   transform: translateY(0);
 }
 
-.hero-section .carousel .slick-prev,
-.hero-section .carousel .slick-next {
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  border: none;
-}
-.hero-section .carousel .slick-prev {
-  left: 10px;
-}
-.hero-section .carousel .slick-next {
-  right: 10px;
-}
-.hero-section .carousel .slick-prev:hover,
-.hero-section .carousel .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
-.hero-section .carousel .slick-prev:active,
-.hero-section .carousel .slick-next:active {
-  background-color: rgba(0, 0, 0, 0.9);
-  transform: scale(0.95);
-}
-.hero-section .carousel .item {
-  position: relative;
-  width: 50rem;
-}
-.hero-section .carousel .item .desc {
-  top: 10rem;
-  left: 15rem;
-  position: absolute;
-  z-index: 1;
-  color: #fff;
-}
-.hero-section .carousel .item .desc .black-friday {
-  margin: 1.5rem 0rem;
-  font-size: 60px;
-  font-weight: 600;
-  color: #000;
-}
-.hero-section .carousel .item .desc p.p-2 {
-  line-height: 1.5;
-  opacity: 0.5;
-}
-.hero-section .carousel .item .desc button {
-  margin: 1rem 0;
-  border: none;
-  padding: 1rem;
-  text-transform: uppercase;
-}
-.hero-section .carousel .item .desc .sale {
-  position: absolute;
-  top: -3rem;
-  right: 7rem;
-  border-radius: 50%;
-  background-color: orange;
-  width: 10rem;
-  height: 10rem;
-  padding: 3rem 3.5rem;
-  text-transform: uppercase;
-  border: 2px dotted white;
-}
-.banner-section {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5rem;
-}
-.banner-section .banner {
-  position: relative;
-  z-index: 1;
-}
-.banner-section .banner:hover div p::before {
-  transform: scale(5);
-  opacity: 1;
-  border: 3px solid rgba(255, 255, 255, 0.8235294118);
-}
-.banner-section .banner div p {
-  position: absolute;
-  top: -2rem;
-  left: 5rem;
-  padding: 1rem;
-  background: #e2ebfc;
+.filter-section {
+  border: 1px solid #ddd;
+  padding: 15px;
   border-radius: 5px;
-  margin: 10rem;
-  transition: transform 1s;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.banner-section .banner div p::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-.women-banner {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  gap: 2rem;
-}
-.women-banner .women-large {
-  flex-grow: 0.3;
-  background-image: url("/assets/img/products/women-large.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 25%;
-  height: 75vh;
-  position: relative;
-}
-.women-banner .women-large .desc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: #fff;
-  text-align: center;
-}
-.women-banner .women-large .desc h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: #fff;
-}
-.women-banner .women-large .desc p {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #fff;
-}
-.women-banner .women-product {
-  flex-grow: 0.7;
-}
-.women-banner .women-product nav ul.menu {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-.women-banner .women-product nav ul.menu li:nth-child(1) a {
-  opacity: 1;
-  padding-bottom: 0.1rem;
-  border-bottom: 2px solid #000;
-}
-.women-banner .women-product nav ul.menu li {
-  padding: 0rem 1rem;
-}
-.women-banner .women-product nav ul.menu li a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 300;
-  color: #000;
-  opacity: 0.5;
-  line-height: 2;
-}
-.women-banner .women-product .women-product-container {
-  margin: 5rem 2rem 0rem 3rem;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel {
-  text-align: center;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel .desc {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel h1 {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #cecece;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 0.2rem;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel p {
-  margin-top: 0.5rem;
-  text-align: center;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel .price {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel .price p {
-  font-size: 20px;
-  font-weight: 800;
-  color: #f9d716;
-}
-.women-banner .women-product .women-product-container .flickity-container .main-carousel .price del {
-  font-size: 14px;
-  font-weight: 18px;
-  color: #cecece;
-  justify-content: center;
-  display: inline-block;
-  margin-top: 1rem;
+  margin-bottom: 20px;
 }
 
-.deal-of-week {
-  background-image: url("/assets/img/time-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 50rem;
-  margin: 0 2rem;
-  position: relative;
-}
-.deal-of-week .content {
-  width: 50rem;
-  position: absolute;
-  left: 10%;
-  top: 15%;
-}
-.deal-of-week .content h1 {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  color: #000;
-}
-.deal-of-week .content h1::after {
-  content: "";
-  display: block;
-  width: 10%;
-  height: 2px;
-  margin: 1rem auto;
-}
-.deal-of-week .content > p {
-  text-align: center;
-  font-size: 1em;
-  font-weight: 300;
-  color: #000;
-  line-height: 1.2rem;
-  opacity: 0.5;
-  width: 35rem;
-  margin-left: 7.5rem;
-}
-.deal-of-week .content .price {
-  display: flex;
-  margin-left: 21.5rem;
-  margin-top: 0.5rem;
-}
-.deal-of-week .content .price > p {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #000;
-  color: #ffa500;
-}
-.deal-of-week .content .price span {
-  font-size: 14px;
-  font-weight: 500;
-  color: #000;
-  margin-top: 0.5rem;
-  margin-left: 0.2rem;
-  opacity: 0.5;
-}
-.deal-of-week .content .countdown-container {
-  display: flex;
-  margin-left: 12rem;
-  margin-top: 2rem;
-}
-.deal-of-week .content .countdown-container .item {
-  margin: 0 0.5rem;
-  text-align: center;
-  width: 5rem;
-  height: 6rem;
-}
-.deal-of-week .content .countdown-container .item p:nth-child(1) {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #000;
-  color: #ffa500;
-}
-.deal-of-week .content .countdown-container .item p:nth-child(2) {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #000;
-  color: #000;
-  opacity: 0.2;
-  margin-top: -1.5rem;
-  text-transform: uppercase;
-}
-.deal-of-week .content button {
-  margin-top: 3rem;
-  margin-left: 20rem;
-  outline: none;
-  border: none;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-}
-
-.man-banner {
-  margin: 5rem 2rem 0rem;
-  display: flex;
-  gap: 1rem;
-}
-.man-banner .content-left {
-  width: 60%;
-  gap: 2rem;
-}
-.man-banner .content-left nav {
-  margin-left: 25rem;
-  margin-bottom: 3rem;
-}
-.man-banner .content-left nav .menu {
-  display: flex;
-  list-style: none;
-}
-.man-banner .content-left nav .menu li:nth-child(1) a {
-  opacity: 1;
-  padding-bottom: 0.1rem;
-  border-bottom: 2px solid #000;
-}
-.man-banner .content-left nav .menu li {
-  padding: 0rem 1rem;
-}
-.man-banner .content-left nav .menu li a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 300;
-  color: #000;
-  opacity: 0.5;
-}
-.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc {
-  text-align: center;
-}
-.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc h1 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000;
-  text-transform: uppercase;
-  opacity: 0.5;
-  margin-top: 0.5rem;
-}
-.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc p {
-  margin-top: 0.5rem;
-}
-.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc .price {
-  display: flex;
-  margin-left: 5rem;
-}
-.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc .price p {
-  font-size: 18px;
-  font-weight: 800;
-  color: #f9d716;
-}
-.man-banner .content-left .men-product-container .flickity-container .main-carousel-2 .carousel-cell .desc .price del {
-  font-size: 14px;
-  font-weight: 300;
-  color: #000;
-  margin-top: 0.8rem;
-  opacity: 0.5;
-  margin-left: 0.2rem;
-}
-.man-banner .content-right {
-  width: 40%;
-  position: relative;
-  margin-left: 8rem;
-}
-.man-banner .content-right img {
-  width: 100%;
-  height: 75vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.man-banner .content-right .desc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-.man-banner .content-right .desc h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: #fff;
-}
-.man-banner .content-right .desc p {
-  margin-top: 1rem;
-}
-.man-banner .content-right .desc p::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin: 1rem auto;
-}
-
-.instagram-photo {
-  display: flex;
-  margin-top: 2rem;
-}
-.instagram-photo .item {
-  position: relative;
-}
-.instagram-photo .item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.5s;
-}
-.instagram-photo .item:hover::after, .instagram-photo .item:hover div {
-  opacity: 1;
-}
-.instagram-photo .item div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  width: inherit;
-  height: 100%;
-  opacity: 0;
-}
-.instagram-photo .item div img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.instagram-photo .item div i {
-  display: inline-block;
-}
-.instagram-photo .item div p {
-  margin-left: -3rem;
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
   text-align: center;
 }
 
-.latest-blog {
-  margin: 2rem 2rem;
-  padding: 0 10rem;
-}
-.latest-blog > h1 {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  color: #000;
-}
-.latest-blog > h1::after {
-  content: "";
-  display: block;
-  width: 5%;
-  height: 2px;
-  margin: 1rem auto;
-}
-.latest-blog .content {
-  display: flex;
-  gap: 3rem;
-}
-.latest-blog .content .item img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.latest-blog .content .item .sub-desc {
-  margin-top: 1rem;
-  display: flex;
-}
-.latest-blog .content .item .sub-desc .item i {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 300;
-  color: #f9d716;
-}
-.latest-blog .content .item .sub-desc .item p {
-  display: inline-block;
-  opacity: 0.5;
-}
-.latest-blog .content .item .sub-desc .num-mess {
-  margin-left: 2rem;
-}
-.latest-blog .content .item .sub-desc .num-mess i {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 300;
-  color: #f9d716;
-}
-.latest-blog .content .item .sub-desc .num-mess p {
-  display: inline-block;
-  opacity: 0.5;
-}
-.latest-blog .content .item .desc {
-  width: 70%;
-}
-.latest-blog .content .item .desc h1 {
-  margin-top: 1rem;
-  line-height: 1.5rem;
-}
-.latest-blog .content .item .desc p {
-  opacity: 0.5;
-  margin-top: 1rem;
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.partner-logo {
-  display: flex;
-  margin: 2rem 2rem;
-  padding: 0 10rem;
+.price {
+  font-weight: bold;
+  color: #f77b3f;
 }
-.partner-logo .item {
-  width: 33.3333333333%;
-  border: 1px solid #ddd2d2;
-  display: flex;
-  padding: 2rem 0px;
-  padding-left: 5rem;
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
 }
-.partner-logo .item img {
-  -o-object-fit: contain;
-     object-fit: contain;
+
+.loading-more {
+  text-align: center;
+  margin-top: 20px;
 }
-.partner-logo .item .desc {
-  padding-left: 2%;
-}
-.partner-logo .item .desc h1 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #000;
-  text-transform: uppercase;
-}
+
 .footer {
   background-color: #303030;
 }
@@ -1352,23 +862,17 @@ header .login p {
   font-weight: 300;
   color: #fff;
 }
-.footer .content .item2 h1,
-.footer .content .item3 h1,
-.footer .content .item4 h1 {
+.footer .content .item2 h1, .footer .content .item3 h1, .footer .content .item4 h1 {
   color: #fff;
 }
-.footer .content .item2 ul,
-.footer .content .item3 ul,
-.footer .content .item4 ul {
+.footer .content .item2 ul, .footer .content .item3 ul, .footer .content .item4 ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
-.footer .content .item2 ul li a,
-.footer .content .item3 ul li a,
-.footer .content .item4 ul li a {
+.footer .content .item2 ul li a, .footer .content .item3 ul li a, .footer .content .item4 ul li a {
   opacity: 0.5;
   color: #fff;
   text-decoration: none;
@@ -1418,16 +922,4 @@ header .login p {
 .footer .coppy-right pre i {
   color: red;
   margin: 0 0.3rem;
-}
-body > section.women-banner.container > div.women-product > div > div > div.swiper-button-prev,
-body > section.women-banner.container > div.women-product > div > div > div.swiper-button-next {
-  display: none;
-}
-
-body > section.women-banner.container > div.women-product > div > div > div.main-carousel.flickity-enabled.is-draggable > div {
-  height: 31.25rem !important;
-}
-
-body > section.man-banner.container > div.content-left > div > div > div.main-carousel-2.flickity-enabled.is-draggable > div {
-  margin-left: 3rem;
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=shop.css.map */

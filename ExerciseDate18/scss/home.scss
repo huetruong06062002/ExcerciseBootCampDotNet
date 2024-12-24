@@ -135,14 +135,30 @@ header {
     .input-category {
       display: flex;
       align-items: center;
+      width: 12rem;
       p {
+        font-size: 0.8rem;
         padding: 1rem;
       }
       i {
         opacity: 0.5;
         border-right: 1px solid #ddd2d2;
         padding: 0.5rem;
-        margin-right: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+    .input-search {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      width: 15%;
+      justify-content: center;
+      background: rgb(253, 177, 36);
+      color: #fff;
+      i{
+        opacity: 0.5;
       }
     }
     input {
@@ -1009,7 +1025,9 @@ header {
         }
       }
     }
-    .item2, .item3, .item4{
+    .item2,
+    .item3,
+    .item4 {
       h1 {
         color: #fff;
       }
@@ -1020,7 +1038,7 @@ header {
         gap: 2rem;
         margin-top: 2rem;
         li {
-          a{
+          a {
             opacity: 0.5;
             color: #fff;
             text-decoration: none;
@@ -1028,14 +1046,12 @@ header {
         }
       }
     }
-    .item{
-      h1{
-
+    .item {
+      h1 {
       }
-      p{
-
+      p {
       }
-      input{
+      input {
         width: 70%;
         padding: 0.5rem;
         margin-top: 1rem;
@@ -1045,14 +1061,14 @@ header {
         opacity: 0.5;
         display: inline-block;
 
-        &::placeholder{
+        &::placeholder {
           color: #fff;
           opacity: 0.5;
           text-transform: capitalize;
           padding: 0 1rem;
         }
       }
-      button{
+      button {
         display: inline-block;
         margin: 0;
         outline: none;
