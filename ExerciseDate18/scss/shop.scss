@@ -1,10 +1,14 @@
-@import './base';
-@import './variable';
+@import "./base";
+@import "./variable";
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 header {
@@ -13,7 +17,6 @@ header {
   display: flex;
   flex-direction: row;
   .email {
-    padding: 20px 0px;
     width: calc(100% / 3);
     border-right: 1px solid #ddd2d2;
     display: flex;
@@ -108,12 +111,12 @@ header {
   }
 }
 
-
 .section-search {
   display: flex;
   padding: 2rem 0;
   justify-content: space-between;
   flex-wrap: nowrap;
+
   .logo-image {
     width: calc(100% / 3);
     display: flex;
@@ -147,6 +150,8 @@ header {
         padding: 0.5rem;
         font-size: 0.8rem;
       }
+      p {
+      }
     }
     .input-search {
       display: flex;
@@ -158,7 +163,7 @@ header {
       justify-content: center;
       background: rgb(253, 177, 36);
       color: #fff;
-      i{
+      i {
         opacity: 0.5;
       }
     }
@@ -171,7 +176,8 @@ header {
       &::placeholder {
         color: #aaa;
         opacity: 0.7;
-        @include text($fs-2xl);
+        @include text();
+        padding-bottom: 2rem;
       }
     }
   }
@@ -211,6 +217,7 @@ header {
       .section-product {
         transition: all 0.5s;
         position: absolute;
+        visibility: hidden;
         left: -15rem;
         z-index: 2;
         // top:4rem;
@@ -297,6 +304,7 @@ header {
         .section-product {
           transform: translateY(0);
           opacity: 1;
+          visibility: visible;
         }
       }
     }
@@ -315,6 +323,7 @@ header {
     text-transform: uppercase;
     height: 100%;
     @include text(14px, $fw-semi);
+    margin-bottom: 0 !important;
     li:nth-child(1) {
       background-color: #3b3b3b;
     }
@@ -342,6 +351,7 @@ header {
           display: block;
           list-style: none;
           text-align: left;
+          visibility: hidden;
           height: auto;
           opacity: 0;
           transform: translateY(10%);
@@ -390,10 +400,11 @@ header {
           display: block;
           top: 3rem;
           z-index: 10;
-          width: 10rem;
+          // width: 10rem;
           li {
             height: 100%;
             a {
+              width: 5rem;
               display: inline-block;
               @include text(14px, $fw-light, $text-light);
             }
@@ -404,49 +415,51 @@ header {
         cursor: pointer;
         .submenu {
           opacity: 1;
+          visibility: visible;
           transform: translateY(0);
         }
       }
     }
   }
 }
+
 $border-color: #ddd;
 $primary-color: #f77b3f;
 $secondary-color: #888;
 
 .filter-section {
-    border: 1px solid $border-color;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+  border: 1px solid $border-color;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .product-card {
-    border: 1px solid $border-color;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
 }
 
 .product-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .price {
-    font-weight: bold;
-    color: $primary-color;
+  font-weight: bold;
+  color: $primary-color;
 }
 
 .old-price {
-    text-decoration: line-through;
-    color: $secondary-color;
+  text-decoration: line-through;
+  color: $secondary-color;
 }
 
 .loading-more {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .footer {
@@ -498,7 +511,9 @@ $secondary-color: #888;
         }
       }
     }
-    .item2, .item3, .item4{
+    .item2,
+    .item3,
+    .item4 {
       h1 {
         color: #fff;
       }
@@ -509,7 +524,7 @@ $secondary-color: #888;
         gap: 2rem;
         margin-top: 2rem;
         li {
-          a{
+          a {
             opacity: 0.5;
             color: #fff;
             text-decoration: none;
@@ -517,14 +532,12 @@ $secondary-color: #888;
         }
       }
     }
-    .item{
-      h1{
-
+    .item {
+      h1 {
       }
-      p{
-
+      p {
       }
-      input{
+      input {
         width: 70%;
         padding: 0.5rem;
         margin-top: 1rem;
@@ -534,14 +547,14 @@ $secondary-color: #888;
         opacity: 0.5;
         display: inline-block;
 
-        &::placeholder{
+        &::placeholder {
           color: #fff;
           opacity: 0.5;
           text-transform: capitalize;
           padding: 0 1rem;
         }
       }
-      button{
+      button {
         display: inline-block;
         margin: 0;
         outline: none;

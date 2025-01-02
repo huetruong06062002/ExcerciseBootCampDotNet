@@ -367,6 +367,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   border-top: 1px solid #ddd2d2;
   border-bottom: 1px solid #ddd2d2;
@@ -374,7 +378,6 @@ header {
   flex-direction: row;
 }
 header .email {
-  padding: 20px 0px;
   width: 33.3333333333%;
   border-right: 1px solid #ddd2d2;
   display: flex;
@@ -544,16 +547,18 @@ header .login p {
 .section-search .search input::-moz-placeholder {
   color: #aaa;
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   color: #000;
+  padding-bottom: 2rem;
 }
 .section-search .search input::placeholder {
   color: #aaa;
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   color: #000;
+  padding-bottom: 2rem;
 }
 .section-search .icon-search {
   width: 33.3333333333%;
@@ -593,6 +598,7 @@ header .login p {
 .section-search .icon-search .item-2 .section-product {
   transition: all 0.5s;
   position: absolute;
+  visibility: hidden;
   left: -15rem;
   z-index: 2;
   transform: translateY(30%);
@@ -672,6 +678,7 @@ header .login p {
 .section-search .icon-search .item-2:hover .section-product {
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
 }
 .nav {
   background-color: #000;
@@ -686,6 +693,7 @@ header .login p {
   font-size: 14px;
   font-weight: 600;
   color: #000;
+  margin-bottom: 0 !important;
 }
 .nav ul li:nth-child(1) {
   background-color: #3b3b3b;
@@ -712,6 +720,7 @@ header .login p {
   display: block;
   list-style: none;
   text-align: left;
+  visibility: hidden;
   height: auto;
   opacity: 0;
   transform: translateY(10%);
@@ -756,12 +765,12 @@ header .login p {
   display: block;
   top: 3rem;
   z-index: 10;
-  width: 10rem;
 }
 .nav ul li a ~ ul.submenu-3 li {
   height: 100%;
 }
 .nav ul li a ~ ul.submenu-3 li a {
+  width: 5rem;
   display: inline-block;
   font-size: 14px;
   font-weight: 300;
@@ -772,6 +781,7 @@ header .login p {
 }
 .nav ul li:hover .submenu {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 
@@ -862,17 +872,23 @@ header .login p {
   font-weight: 300;
   color: #fff;
 }
-.footer .content .item2 h1, .footer .content .item3 h1, .footer .content .item4 h1 {
+.footer .content .item2 h1,
+.footer .content .item3 h1,
+.footer .content .item4 h1 {
   color: #fff;
 }
-.footer .content .item2 ul, .footer .content .item3 ul, .footer .content .item4 ul {
+.footer .content .item2 ul,
+.footer .content .item3 ul,
+.footer .content .item4 ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
-.footer .content .item2 ul li a, .footer .content .item3 ul li a, .footer .content .item4 ul li a {
+.footer .content .item2 ul li a,
+.footer .content .item3 ul li a,
+.footer .content .item4 ul li a {
   opacity: 0.5;
   color: #fff;
   text-decoration: none;

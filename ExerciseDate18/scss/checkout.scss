@@ -11,7 +11,6 @@ header {
   display: flex;
   flex-direction: row;
   .email {
-    padding: 20px 0px;
     width: calc(100% / 3);
     border-right: 1px solid #ddd2d2;
     display: flex;
@@ -111,6 +110,7 @@ header {
   padding: 2rem 0;
   justify-content: space-between;
   flex-wrap: nowrap;
+
   .logo-image {
     width: calc(100% / 3);
     display: flex;
@@ -144,6 +144,8 @@ header {
         padding: 0.5rem;
         font-size: 0.8rem;
       }
+      p {
+      }
     }
     .input-search {
       display: flex;
@@ -155,7 +157,7 @@ header {
       justify-content: center;
       background: rgb(253, 177, 36);
       color: #fff;
-      i{
+      i {
         opacity: 0.5;
       }
     }
@@ -168,7 +170,8 @@ header {
       &::placeholder {
         color: #aaa;
         opacity: 0.7;
-        @include text($fs-2xl);
+        @include text();
+        padding-bottom: 2rem;
       }
     }
   }
@@ -208,6 +211,7 @@ header {
       .section-product {
         transition: all 0.5s;
         position: absolute;
+        visibility: hidden;
         left: -15rem;
         z-index: 2;
         // top:4rem;
@@ -294,6 +298,7 @@ header {
         .section-product {
           transform: translateY(0);
           opacity: 1;
+          visibility: visible;
         }
       }
     }
@@ -302,6 +307,115 @@ header {
   }
 }
 
+.nav {
+  background-color: $bg-dark;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    height: 100%;
+    @include text(14px, $fw-semi);
+    margin-bottom: 0 !important;
+    li:nth-child(1) {
+      background-color: #3b3b3b;
+    }
+    li {
+      height: 100%;
+      padding: 1rem 2.5rem;
+      position: relative;
+      border-right: 1px solid #f2ecec;
+      i {
+        @extend .text-light;
+        padding-right: 1rem;
+      }
+      a {
+        text-decoration: none;
+
+        i.fa-sharp-duotone {
+          position: absolute;
+          padding-left: 1rem;
+          right: 0.2rem;
+        }
+
+        @extend .text-light;
+        ~ ul.submenu {
+          position: absolute;
+          display: block;
+          list-style: none;
+          text-align: left;
+          visibility: hidden;
+          height: auto;
+          opacity: 0;
+          transform: translateY(10%);
+          transition:
+            transform 0.5s ease,
+            opacity 0.5s ease;
+          z-index: 1;
+          li {
+            a {
+              text-decoration: none;
+              @include text();
+              text-transform: capitalize;
+              &:hover {
+                color: #ffa500;
+              }
+            }
+          }
+        }
+        ~ ul.submenu-1 {
+          position: absolute;
+          display: block;
+          width: 20rem;
+          top: 3rem;
+          left: 0rem;
+          background-color: #fff;
+        }
+        ~ ul.submenu-2 {
+          position: absolute;
+          top: 3.05rem;
+          width: 12rem;
+          right: 0px;
+          background-color: #000;
+          display: flex;
+          flex-direction: column;
+          li {
+            a {
+              color: #fff;
+            }
+          }
+        }
+        ~ ul.submenu-3 {
+          display: block;
+          position: absolute;
+          background-color: #000;
+          right: 0rem;
+          display: block;
+          top: 3rem;
+          z-index: 10;
+          // width: 10rem;
+          li {
+            height: 100%;
+            a {
+              width: 5rem;
+              display: inline-block;
+              @include text(14px, $fw-light, $text-light);
+            }
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .submenu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
 
 .checkout-section {
     margin-top: 30px;

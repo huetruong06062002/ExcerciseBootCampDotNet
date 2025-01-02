@@ -87,7 +87,7 @@
   background-color: #e2ebfc;
 }
 
-.text-light, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
+.text-light, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
   color: #e2ebfc;
 }
 
@@ -285,7 +285,7 @@
   background-color: #e2ebfc;
 }
 
-.text-light, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
+.text-light, .nav ul li a, .nav ul li i, .section-search .icon-search .item-2 .section-product .button .item-2, .section-search .icon-search .item-2 .section-product .button .item-1 {
   color: #e2ebfc;
 }
 
@@ -368,7 +368,6 @@ header {
   flex-direction: row;
 }
 header .email {
-  padding: 20px 0px;
   width: 33.3333333333%;
   border-right: 1px solid #ddd2d2;
   display: flex;
@@ -538,16 +537,18 @@ header .login p {
 .section-search .search input::-moz-placeholder {
   color: #aaa;
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   color: #000;
+  padding-bottom: 2rem;
 }
 .section-search .search input::placeholder {
   color: #aaa;
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   color: #000;
+  padding-bottom: 2rem;
 }
 .section-search .icon-search {
   width: 33.3333333333%;
@@ -587,6 +588,7 @@ header .login p {
 .section-search .icon-search .item-2 .section-product {
   transition: all 0.5s;
   position: absolute;
+  visibility: hidden;
   left: -15rem;
   z-index: 2;
   transform: translateY(30%);
@@ -666,7 +668,113 @@ header .login p {
 .section-search .icon-search .item-2:hover .section-product {
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
 }
+.nav {
+  background-color: #000;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0 !important;
+}
+.nav ul li:nth-child(1) {
+  background-color: #3b3b3b;
+}
+.nav ul li {
+  height: 100%;
+  padding: 1rem 2.5rem;
+  position: relative;
+  border-right: 1px solid #f2ecec;
+}
+.nav ul li i {
+  padding-right: 1rem;
+}
+.nav ul li a {
+  text-decoration: none;
+}
+.nav ul li a i.fa-sharp-duotone {
+  position: absolute;
+  padding-left: 1rem;
+  right: 0.2rem;
+}
+.nav ul li a ~ ul.submenu {
+  position: absolute;
+  display: block;
+  list-style: none;
+  text-align: left;
+  visibility: hidden;
+  height: auto;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+}
+.nav ul li a ~ ul.submenu li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;
+  text-transform: capitalize;
+}
+.nav ul li a ~ ul.submenu li a:hover {
+  color: #ffa500;
+}
+.nav ul li a ~ ul.submenu-1 {
+  position: absolute;
+  display: block;
+  width: 20rem;
+  top: 3rem;
+  left: 0rem;
+  background-color: #fff;
+}
+.nav ul li a ~ ul.submenu-2 {
+  position: absolute;
+  top: 3.05rem;
+  width: 12rem;
+  right: 0px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+.nav ul li a ~ ul.submenu-2 li a {
+  color: #fff;
+}
+.nav ul li a ~ ul.submenu-3 {
+  display: block;
+  position: absolute;
+  background-color: #000;
+  right: 0rem;
+  display: block;
+  top: 3rem;
+  z-index: 10;
+}
+.nav ul li a ~ ul.submenu-3 li {
+  height: 100%;
+}
+.nav ul li a ~ ul.submenu-3 li a {
+  width: 5rem;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
+.nav ul li:hover {
+  cursor: pointer;
+}
+.nav ul li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .checkout-section {
   margin-top: 30px;
 }

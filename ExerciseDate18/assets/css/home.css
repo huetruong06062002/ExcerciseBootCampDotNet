@@ -367,6 +367,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   border-top: 1px solid #ddd2d2;
   border-bottom: 1px solid #ddd2d2;
@@ -593,6 +597,7 @@ header .login p {
 .section-search .icon-search .item-2 .section-product {
   transition: all 0.5s;
   position: absolute;
+  visibility: hidden;
   left: -15rem;
   z-index: 2;
   transform: translateY(30%);
@@ -672,6 +677,7 @@ header .login p {
 .section-search .icon-search .item-2:hover .section-product {
   transform: translateY(0);
   opacity: 1;
+  visibility: hidden;
 }
 .nav {
   background-color: #000;
@@ -709,13 +715,13 @@ header .login p {
 }
 .nav ul li a ~ ul.submenu {
   position: absolute;
-  display: block;
+  visibility: hidden;
   list-style: none;
   text-align: left;
   height: auto;
   opacity: 0;
   transform: translateY(10%);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: all 0.5s ease, opacity 0.5s ease;
   z-index: 1;
 }
 .nav ul li a ~ ul.submenu li a {
@@ -772,7 +778,9 @@ header .login p {
 }
 .nav ul li:hover .submenu {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
+  display: block !important;
 }
 
 .hero-section .carousel .slick-prev,

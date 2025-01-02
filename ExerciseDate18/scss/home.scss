@@ -5,6 +5,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+
+body{
+  overflow-x: hidden;
 }
 
 header {
@@ -210,6 +215,7 @@ header {
       .section-product {
         transition: all 0.5s;
         position: absolute;
+        visibility: hidden;
         left: -15rem;
         z-index: 2;
         // top:4rem;
@@ -296,6 +302,7 @@ header {
         .section-product {
           transform: translateY(0);
           opacity: 1;
+          visibility: hidden;
         }
       }
     }
@@ -338,15 +345,15 @@ header {
         @extend .text-light;
         ~ ul.submenu {
           position: absolute;
-          display: block;
+          visibility:hidden;
           list-style: none;
           text-align: left;
           height: auto;
           opacity: 0;
           transform: translateY(10%);
           transition:
-            transform 0.5s ease,
-            opacity 0.5s ease;
+          all 0.5s ease,
+          opacity 0.5s ease;
           z-index: 1;
           li {
             a {
@@ -403,7 +410,11 @@ header {
         cursor: pointer;
         .submenu {
           opacity: 1;
+          visibility:visible;
+
           transform: translateY(0);
+          display: block !important;
+
         }
       }
     }
