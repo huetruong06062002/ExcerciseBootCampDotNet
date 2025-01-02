@@ -1,0 +1,45 @@
+@inherits LayoutComponentBase
+@page "/ex-2"
+
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col-3 p-0">
+      <div class="sidebar d-flex flex-column align-content-center">
+        <div class="text-center profile-picture mx-auto  mt-5">
+          <img src="https://picsum.photos/200" class="border border-5 border-secondary-subtle" alt="Profile Picture"
+            width="10">
+        </div>
+        <nav class="mx-auto mt-2">
+          <NavLink href="/about" ActiveClass="active" Match="NavLinkMatch.All">ABOUT</NavLink>
+          <NavLink href="/experience" ActiveClass="active" Match="NavLinkMatch.All">EXPERIENCE</NavLink>
+          <NavLink href="/education" ActiveClass="active" Match="NavLinkMatch.All">EDUCATION</NavLink>
+          <NavLink href="/skills" ActiveClass="active" Match="NavLinkMatch.All">SKILLS</NavLink>
+          <NavLink href="/interests" ActiveClass="active" Match="NavLinkMatch.All">INTERESTS</NavLink>
+          <NavLink href="/awards" ActiveClass="active" Match="NavLinkMatch.All">AWARDS</NavLink>
+        </nav>
+      </div>
+
+    </div>
+    <div class="col-9 p-0">
+      <div class="main-content">
+        <About />
+        <hr>
+        <Experience />
+        <hr>
+        <Education />
+        <hr>
+        <Skills />
+        <hr>
+        <Interests/>
+        <hr>
+        <Awards />
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<style>
+
+</style>

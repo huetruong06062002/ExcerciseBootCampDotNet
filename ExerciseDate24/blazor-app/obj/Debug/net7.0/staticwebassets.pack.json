@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\blazor-app.bundle.scp.css",
+      "PackagePath": "staticwebassets\\blazor-app.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\image\\products\\black-car.jpg",
+      "PackagePath": "staticwebassets\\image\\products\\black-car.jpg"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\image\\products\\red-car.jpg",
+      "PackagePath": "staticwebassets\\image\\products\\red-car.jpg"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\image\\products\\silver-car.jpg",
+      "PackagePath": "staticwebassets\\image\\products\\silver-car.jpg"
+    },
+    {
+      "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate24\\blazor-app\\wwwroot\\image\\products\\steel-car.jpg",
+      "PackagePath": "staticwebassets\\image\\products\\steel-car.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.blazor-app.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.blazor-app.props",
+      "PackagePath": "build\\blazor-app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.blazor-app.props",
+      "PackagePath": "buildMultiTargeting\\blazor-app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.blazor-app.props",
+      "PackagePath": "buildTransitive\\blazor-app.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

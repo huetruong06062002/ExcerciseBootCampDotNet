@@ -1,0 +1,17 @@
+
+<Header/>
+@page "/ex-1"
+
+<div class="container d-flex">
+  <img src="/image/products/@color-car.jpg" width="25%" alt="">
+  <div class="item-btn ms-2">
+    <button class="btn btn-danger" @onclick="@(() => color="red")"  >Red Color</button>
+    <button class="btn btn-secondary" @onclick="@(() => color="silver")" >Silver Color</button>
+    <button class="btn btn-dark" @onclick="@(() => color="black")"  >Black Color</button>
+  </div>
+</div>
+
+@code {
+  public string color { get; set; } = "red";
+
+}

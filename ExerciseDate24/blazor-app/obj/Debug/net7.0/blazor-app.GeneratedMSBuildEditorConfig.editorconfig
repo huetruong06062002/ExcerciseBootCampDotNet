@@ -1,0 +1,95 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = blazor_app
+build_property.RootNamespace = blazor_app
+build_property.ProjectDir = E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate24\blazor-app\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate24\blazor-app
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/components/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xBYm91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/components/Awards.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xBd2FyZHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/components/Education.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xFZHVjYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/components/Experience.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xFeHBlcmllbmNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/components/Interests.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xJbnRlcmVzdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/components/Skills.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY29tcG9uZW50c1xTa2lsbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/Ex1.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXgxLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/Ex2.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXgyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-1lns6lcjt1
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-idfnn7y04x
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/.Net-core/Cybersoft-Asp.net/Exercise/ExerciseDate24/blazor-app/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
