@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "bJI32yM9fXbH4bFVhh8+KYN9wkhK32Ox80HjYxwPR7eVeUWys7et5cSJStvX+lZn9jM2m6T6xz3ff/lxfTcOQw==",
+  "success": true,
+  "projectFilePath": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate27\\Exercise27.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
