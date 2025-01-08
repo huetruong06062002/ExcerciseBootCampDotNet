@@ -15,17 +15,19 @@ class CustomerContactVM
   [RegularExpression(@"^\d{10,12}$", ErrorMessage = "Phone number must be 10-12 digits.")]
   public string PhoneNumber { get; set; }
 
-  [Required(ErrorMessage = "Please select a course.")]
-  public string SelectedCourse { get; set; }
+  [Required(ErrorMessage = "Address is required.")]
+  public string Address { get; set; }
 
-  [Required(ErrorMessage = "Please select a study mode.")]
-  public string StudyMode { get; set; }
+  [Required(ErrorMessage = "Message must be at lease 10 characters long.")]
+  [MinLength(10, ErrorMessage = "Message must be at least 10 characters long.")]
+  [MaxLength(20, ErrorMessage = "Message must be at most 20 characters")]
+  public string Message { get; set; }
 
-  [Required(ErrorMessage = "Preferred start date is required.")]
-  public DateTime? PreferredStartDate { get; set; }
 
-  public string Comments { get; set; }
+  [Required(ErrorMessage = "Please choose service")]
+  public string SelectedService { get; set; }
 
-  [Required(ErrorMessage = "You must agree to the terms and conditions.")]
+  [Required()]
   public bool AgreeToTerms { get; set; }
+
 }

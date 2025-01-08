@@ -25,8 +25,8 @@ class UserRegiserVM
   [Required(ErrorMessage = "Preferred start date is required.")]
   public DateTime? PreferredStartDate {get; set;}
 
+  [Required]
   public string Comments{get; set;}
 
-  [Required(ErrorMessage = "You must agree to the terms and conditions.")]
   public bool AgreeToTerms {get; set;}
 }

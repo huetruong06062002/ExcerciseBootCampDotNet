@@ -3,7 +3,8 @@
 <div class="container">
   <h1>Course Registration Form</h1>
 
-  <EditForm Model="@UserRegiserVM" OnValidSubmit="@HandleValidSubmit">
+  <EditForm Model="@UserRegiserVM" OnInvalidSubmit="HandleValidSubmit">
+    <ValidationSummary />
     <DataAnnotationsValidator />
     <div class="form-group">
       <label>Full Name *</label><br />
@@ -51,26 +52,38 @@
       <InputTextArea class="form-control" @bind-Value="UserRegiserVM.Comments" style="width: 31.25rem;"></InputTextArea>
       <ValidationMessage For="@(() => UserRegiserVM.Comments)" />
     </div>
-    <div>
+    <div class="form-group d-flex align-items-center">
       <label class="d-flex">
-        <InputCheckbox  @bind-Value="UserRegiserVM.AgreeToTerms"/>
+        <InputCheckbox @bind-Value="UserRegiserVM.AgreeToTerms" />
         <p class="mt-3 ms-2">I agree to the terms and conditions *</p>
-        <p class="mt-3 ms-2 text text-danger ms-1">You must agree before submitting</p>
       </label>
+      @{
+        if (AgreeToTerms)
+        {
+
+        }
+        else
+        {
+          <p class="mt-3 ms-2 text text-danger">You must agree before submitting *</p>
+        }
+      }
       <ValidationMessage For="@(() => UserRegiserVM.AgreeToTerms)" />
     </div>
-    <button class="btn btn-success mt-2" style="width: 31.25rem;">Register</button>
+    <button type="submit" class="btn btn-success mt-2" style="width: 31.25rem;">Register</button>
   </EditForm>
 </div>
 
 @code {
   private UserRegiserVM UserRegiserVM = new UserRegiserVM();
+
+  private bool AgreeToTerms;
   public List<string> Courses = new List<string> { "Course 1", "Course 2", "Course 3" };
 
   private void HandleValidSubmit()
   {
     //Handle form submission
     Console.WriteLine("Form submitted successfully!");
+    AgreeToTerms = UserRegiserVM.AgreeToTerms; 
   }
 
 }

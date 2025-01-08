@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\Exercise28\\Exercise28.csproj": {}
+    "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate28\\Exercise28.csproj": {}
   },
   "projects": {
-    "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\Exercise28\\Exercise28.csproj": {
+    "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate28\\Exercise28.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\Exercise28\\Exercise28.csproj",
+        "projectUniqueName": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate28\\Exercise28.csproj",
         "projectName": "Exercise28",
-        "projectPath": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\Exercise28\\Exercise28.csproj",
+        "projectPath": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate28\\Exercise28.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\Exercise28\\obj\\",
+        "outputPath": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate28\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
