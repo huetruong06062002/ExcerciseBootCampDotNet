@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using ExerciseDate32.Data;
+using ExerciseDate32.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+//Add httpclient
+builder.Services.AddHttpClient();
+
+//Add Service
+builder.Services.AddScoped<StoreService>();
+
 
 var app = builder.Build();
 
