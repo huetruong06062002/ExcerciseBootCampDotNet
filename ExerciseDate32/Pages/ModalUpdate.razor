@@ -1,3 +1,4 @@
+@using System.Text.Json;
 @inject StoreService storeService
 @inject NavigationManager Navigation
 
@@ -27,6 +28,13 @@
             <DataAnnotationsValidator />
             <ValidationSummary />
 
+             <div class="mb-3 d-none">
+              <label for="id" class="form-label">Id</label>
+              <input type="hidden" id="id" class="form-control" @bind="store.Id" />
+              <ValidationMessage For="@(() => store.Id)" />
+            </div>
+
+
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <InputText id="name" class="form-control" @bind-Value="store.Name" />
@@ -41,7 +49,7 @@
 
             <div class="mb-3">
               <label for="latitude" class="form-label">Latitude</label>
-              <InputText id="latitude" class="form-control" @bind-Value="store.Description" />
+              <InputText id="latitude" class="form-control" @bind-Value="store.Latitude" />
               <ValidationMessage For="@(() => store.Description)" />
             </div>
 
@@ -95,7 +103,10 @@
 
   private async Task HandleValidSubmit()
   {
-    res = await storeService.UpdateStoreApi();
+    
+    res = await storeService.UpdateStoreApi(storeService.storeDetail.Id.ToString());
+    Console.WriteLine(storeService.storeDetail.Id.ToString());
+    Console.WriteLine(JsonSerializer.Serialize(storeService.storeDetail));
     StateHasChanged();
   }
 

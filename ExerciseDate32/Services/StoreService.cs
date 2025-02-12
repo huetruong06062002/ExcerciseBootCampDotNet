@@ -34,12 +34,13 @@ public class StoreService
     SetStateHasChange();
   }
 
-  public async Task<string> UpdateStoreApi()
+  public async Task<string> UpdateStoreApi(string id)
   {
     // URL gốc của API
-    var url = $"https://apistore.cybersoft.edu.vn/api/Store";
+    var url = $"https://apistore.cybersoft.edu.vn/api/Store?id={id}";
     var res = await _httpClient.PutAsJsonAsync(url, storeDetail);
     var response = await res.Content.ReadFromJsonAsync<HTTPResponse<string>>();
+     GetAllStoreApi();
     SetStateHasChange();
     return response.content;
   }
