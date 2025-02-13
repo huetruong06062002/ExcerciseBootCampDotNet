@@ -9,6 +9,14 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+//add services to the container
+builder.Services.AddSingleton<ProductService>();
+
+//Add signalR
+builder.Services.AddSignalR();
+//Add HttpClient
+builder.Services.AddHttpClient();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +32,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+
+app.MapHub<ProductHub>("/product-hub");
+app.MapHub<ChatHub>("/chat-hub");
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");

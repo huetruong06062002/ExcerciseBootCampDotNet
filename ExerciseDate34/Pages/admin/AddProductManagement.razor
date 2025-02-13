@@ -1,0 +1,84 @@
+@page "/add-product"
+
+@inject NavigationManager navigate;
+@inject ProductService productService;
+
+<div class="container my-4">
+  <!-- Form to Add Product -->
+  <h2>Add Product</h2>
+  <EditForm Model="@product" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <InputText id="name" class="form-control" @bind-Value="product.Name" />
+      <ValidationMessage For="@(() => product.Name)" />
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <InputNumber id="price" class="form-control" @bind-Value="product.Price" />
+      <ValidationMessage For="@(() => product.Price)" />
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <InputTextArea id="description" class="form-control" @bind-Value="product.Description" />
+      <ValidationMessage For="@(() => product.Description)" />
+    </div>
+
+    <div class="mb-3">
+      <label for="shortDescription" class="form-label">Short Description</label>
+      <InputText id="shortDescription" class="form-control" @bind-Value="product.ShortDescription" />
+      <ValidationMessage For="@(() => product.ShortDescription)" />
+    </div>
+
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantity</label>
+      <InputNumber id="quantity" class="form-control" @bind-Value="product.Quantity" />
+      <ValidationMessage For="@(() => product.Quantity)" />
+    </div>
+
+    <div class="mb-3">
+      <label for="imgLink" class="form-label">Image Link</label>
+      <InputText id="imgLink" class="form-control" @bind-Value="product.ImgLink" />
+      <ValidationMessage For="@(() => product.ImgLink)" />
+    </div>
+
+    <div class="alert alert-danger">@productService.resAddProduct</div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+  </EditForm>
+</div>
+
+@code {
+  private ProductAddNew product = new ProductAddNew();
+  HubConnection ProductHub;
+
+  private void HandleValidSubmit()
+  {
+    ProductHub.InvokeAsync("AddNewProduct", product);
+  }
+
+
+  protected override async Task OnInitializedAsync()
+  {
+    ProductHub = new HubConnectionBuilder().WithUrl(navigate.ToAbsoluteUri("/product-hub")).Build();
+    //Kết nối (connect)
+    
+    await ProductHub.StartAsync();
+
+  }
+
+  private void Cancel()
+  {
+    // Handle cancel action
+    navigate.NavigateTo("/");
+  }
+
+  private async Task DisposeAsync()
+  {
+    await ProductHub.StopAsync();
+  }
+}

@@ -1,0 +1,125 @@
+@page "/chat"
+@inject NavigationManager Navigation
+@implements IDisposable
+
+<h3>Chat Rooms</h3>
+
+<input type="text" @bind="newRoomName" placeholder="Enter Room Name" />
+<button @onclick="CreateRoom">Create Room</button>
+
+<ul>
+    @foreach (var room in chatRooms)
+    {
+        <li>
+            @room <button @onclick="() => JoinRoom(room)">Join</button>
+        </li>
+    }
+</ul>
+
+@if (!string.IsNullOrEmpty(currentRoom))
+{
+    <h4>Room: @currentRoom</h4>
+    <ul>
+        @foreach (var msg in messages)
+        {
+            <li><strong>@msg.User:</strong> @msg.Text</li>
+        }
+    </ul>
+    
+    <input type="text" @bind="newMessage" placeholder="Type a message..." />
+    <button @onclick="SendMessage">Send</button>
+}
+
+@code {
+    private HubConnection? hubConnection;
+    private string newRoomName = "";
+    private string newMessage = "";
+    private string currentRoom = "";
+    private string userName = "User" + new Random().Next(1000);
+    private List<string> chatRooms = new();
+    private List<Message> messages = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/chat-hub"))
+            .Build();
+
+        hubConnection.On<string>("RoomCreated", (room) =>
+        {
+            chatRooms.Add(room);
+            StateHasChanged();
+        });
+
+        hubConnection.On<string, string>("UserJoined", (user, room) =>
+        {
+            if (room == currentRoom)
+            {
+                messages.Add(new Message { User = "System", Text = $"{user} joined the room." });
+                StateHasChanged();
+            }
+        });
+
+        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        {
+            if (currentRoom != "")
+            {
+                messages.Add(new Message { User = user, Text = message });
+                StateHasChanged();
+            }
+        });
+
+        hubConnection.On<string, string>("UserLeft", (user, room) =>
+        {
+            if (room == currentRoom)
+            {
+                messages.Add(new Message { User = "System", Text = $"{user} left the room." });
+                StateHasChanged();
+            }
+        });
+
+        await hubConnection.StartAsync();
+    }
+
+    private async Task CreateRoom()
+    {
+        if (!string.IsNullOrEmpty(newRoomName))
+        {
+            await hubConnection.SendAsync("CreateRoom", newRoomName);
+            newRoomName = "";
+        }
+    }
+
+    private async Task JoinRoom(string room)
+    {
+        if (!string.IsNullOrEmpty(room))
+        {
+            currentRoom = room;
+            messages.Clear();
+            await hubConnection.SendAsync("JoinRoom", room, userName);
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (!string.IsNullOrEmpty(newMessage) && !string.IsNullOrEmpty(currentRoom))
+        {
+            await hubConnection.SendAsync("SendMessage", currentRoom, userName, newMessage);
+            newMessage = "";
+        }
+    }
+
+    public void Dispose()
+    {
+        if (hubConnection != null)
+        {
+            _ = hubConnection.DisposeAsync();
+        }
+    }
+
+    private class Message
+    {
+        public string User { get; set; } = "";
+        public string Text { get; set; } = "";
+    }
+}

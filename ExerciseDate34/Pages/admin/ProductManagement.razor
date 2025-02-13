@@ -1,0 +1,94 @@
+@page "/admin/product-management"
+@using System.Text.Json;
+@inject NavigationManager navigate;
+<div class="container my-4">
+  <!-- Header -->
+  <div class="d-flex justify-content-between mb-3">
+    <h2>Product Management</h2>
+    <button class="btn btn-success">Add new product</button>
+  </div>
+
+  <!-- Search -->
+  <div class="d-flex mb-3">
+    <input type="text" class="form-control me-2" placeholder="Search product ...">
+    <button class="btn btn-primary">Search</button>
+  </div>
+
+  <!-- Product Table -->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var product in PagedProducts)
+      {
+        <tr>
+          <td>@product.Id</td>
+          <td><img src="@product.Image" alt="@product.Name" width="50"></td>
+          <td>@product.Price</td>
+          <td>
+            <button class="btn btn-danger btn-sm">Del</button>
+            <button class="btn btn-warning btn-sm">Edit</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li class="page-item @(CurrentPage == 1 ? "disabled" : "")">
+        <button class="page-link" @onclick="() => ChangePage(CurrentPage - 1)">Previous</button>
+      </li>
+      @for (int i = 1; i <= TotalPages; i++)
+      {
+        <li class="page-item @(i == CurrentPage ? "active" : "")">
+          <button class="page-link" @onclick="() => ChangePage(i)">@i</button>
+        </li>
+      }
+      <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")">
+        <button class="page-link" @onclick="() => ChangePage(CurrentPage + 1)">Next</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+@code {
+  HubConnection ProductHub;
+  List<ProductVM> products = new List<ProductVM>();
+  int CurrentPage = 1;
+  int PageSize = 5;
+  List<ProductVM> PagedProducts => products.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+  int TotalPages => (int)Math.Ceiling((double)products.Count / PageSize);
+
+  protected override async Task OnInitializedAsync()
+  {
+    ProductHub = new HubConnectionBuilder().WithUrl(navigate.ToAbsoluteUri("/product-hub")).Build();
+    await ProductHub.StartAsync();
+
+    ProductHub.On<List<ProductVM>>("GetAllProduct", async (lstProduct) =>
+    {
+      products = lstProduct;
+      await InvokeAsync(StateHasChanged);
+    });
+  }
+
+  private void ChangePage(int page)
+  {
+    if (page > 0 && page <= TotalPages)
+    {
+      CurrentPage = page;
+    }
+  }
+
+  private async Task DisposeAsync()
+  {
+    await ProductHub.StopAsync();
+  }
+}
