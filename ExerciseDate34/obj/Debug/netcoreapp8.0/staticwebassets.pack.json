@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate34\\obj\\Debug\\netcoreapp8.0\\scopedcss\\projectbundle\\ExerciseDate34.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ExerciseDate34.bundle.scp.css"
+      "PackagePath": "staticwebassets\\ExerciseDate34.de1jx06nlr.bundle.scp.css"
     },
     {
       "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate34\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -55,6 +55,10 @@
     {
       "Id": "E:\\.Net-core\\Cybersoft-Asp.net\\Exercise\\ExerciseDate34\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\netcoreapp8.0\\staticwebassets\\msbuild.ExerciseDate34.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\netcoreapp8.0\\staticwebassets\\msbuild.ExerciseDate34.Microsoft.AspNetCore.StaticWebAssets.props",

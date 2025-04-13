@@ -1,0 +1,102 @@
+CREATE TABLE KhachHang (
+	id int PRIMARY KEY,
+	TaiKhoan NVARCHAR(50),
+	MATKHAU NVARCHAR(50),
+	EMAIL NVARCHAR(100),
+	DIACHI NVARCHAR(150),
+	DIENTHOAI NVARCHAR(20),
+	GIOITINH CHAR(1),
+	NGAYSINH DATE,
+	HOTEN NVARCHAR(50)
+)
+
+
+CREATE TABLE DONHANG(
+	id int PRIMARY KEY,
+	NGAYGIAO DATE,
+	NGAYDAT DATE,
+	TINHTRANGGH NVARCHAR(20),
+	DaTHANHTOAN BIT,
+	MAKH int,
+)
+
+
+CREATE TABLE SACH(
+	id int PRIMARY KEY,
+	TenSach NVARCHAR(100),
+	SoLuongTon int,
+	NgayCapNhat DATE,
+	AnhBia NVARCHAR(500),
+	MoTa NVARCHAR(500),
+)
+
+
+CREATE TABLE TACGIA(
+	id int PRIMARY KEY,
+	TenTacGia NVARCHAR(100),
+	DiaChi NVARCHAR(100),
+	TieuSu NVARCHAR(100),
+	DienThoai NVARCHAR(100)
+)
+
+
+CREATE TABLE CHITIET_SACH_TAC_Gia(
+	id int PRIMARY KEY,
+	maTacGia int,
+	maSach int,
+	VaiTro NVARCHAR(50),
+	ViTri NVARCHAR(50),
+)
+
+CREATE TABLE CHITIETDONHANG_SACH(
+	id int PRIMARY KEY,
+	SoLuong int,
+	DonGia FLOAT,
+	maDonHang int,
+	maSach int, 
+)
+
+
+CREATE TABLE CHUDE (
+	id int PRIMARY KEY,
+	TenChuDe NVARCHAR(50),
+	maSach int,
+)
+
+
+CREATE TABLE NHAXUATBAN(
+	id int PRIMARY KEY,
+	TenNSB NVARCHAR(50),
+	DIACHI NVARCHAR(50),
+	DIENTHOAI NVARCHAR(50),
+	MaSach int,
+)
+
+
+/*
+ Add Foreign key va unique
+*/
+
+Use ExerciseDate39
+
+Alter Table DONHANG Add 
+CONSTRAINT fk_donhang_khachhang
+FOREIGN KEY (MAKH) REFERENCES KHACHHANG(id)
+
+
+ALter table CHITIETDONHANG_SACH Add
+CONSTRAINT fk_chitietdonhang_donhang
+FOREIGN KEY (maDonHang) REFERENCES DONHANG(id)
+
+
+ALter table CHITIETDONHANG_SACH Add
+CONSTRAINT fk_chitietdonhang_sach
+FOREIGN KEY (maSach) REFERENCES Sach(id)
+
+Alter table CHUDE Add
+CONSTRAINT fk_chude_sach
+FOREIGN KEY (maSach) REFERENCES Sach(id) 
+
+Alter table NHAXUATBAN Add
+CONSTRAINT fk_nhaxuatban_sach
+FOREIGN KEY (maSach) REFERENCES Sach(id)

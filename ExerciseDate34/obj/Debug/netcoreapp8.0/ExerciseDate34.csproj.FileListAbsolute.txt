@@ -29,7 +29,6 @@ E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\s
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\scopedcss\bundle\ExerciseDate34.styles.css
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\scopedcss\projectbundle\ExerciseDate34.bundle.scp.css
-E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\ExerciseDate34.csproj.CopyComplete
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\ExerciseDate34.dll
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\refint\ExerciseDate34.dll
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\ExerciseDate34.pdb
@@ -41,3 +40,7 @@ E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\bin\Debug\netcoreapp8.0\M
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\bin\Debug\netcoreapp8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\bin\Debug\netcoreapp8.0\Microsoft.Extensions.Features.dll
 E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\bin\Debug\netcoreapp8.0\Microsoft.Extensions.Options.dll
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\bin\Debug\netcoreapp8.0\ExerciseDate34.staticwebassets.endpoints.json
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\staticwebassets.build.endpoints.json
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\staticwebassets\msbuild.ExerciseDate34.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+E:\.Net-core\Cybersoft-Asp.net\Exercise\ExerciseDate34\obj\Debug\netcoreapp8.0\Exercise.57B6737A.Up2Date
